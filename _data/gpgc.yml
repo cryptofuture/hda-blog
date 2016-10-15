@@ -1,0 +1,11 @@
+repo_owner: cryptofuture
+repo_name: hda-blog
+disabled: false
+use_show_action: false
+label_name: Post Comments
+label_color: c7c7c7
+github_application:
+  client_id: 08b910c1dbd457dc25a5
+  code_authenticator: https://blog.hda.me/api/authenticate/
+  callback_url: https://blog.hda.me/public/html/index.html
+enable_diagnostics: true

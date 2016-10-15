@@ -1,0 +1,97 @@
+header {
+    padding: 1em 0;
+    border-bottom: 1px solid #eee;
+
+    .logo {
+    }
+
+    .info {
+        margin: 0 1em;
+
+        h1 {
+            font-weight: 800;
+            font-size: 26px;
+            letter-spacing: -1px;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            margin: -0.5em 0 0 0;
+            font-weight: 300;
+            font-size: 16px;
+        }
+    }
+
+    nav {
+        font-family: $font-head;
+        a {
+            letter-spacing: 1px;
+            /* background: #c7c7c7; */
+            color:#333;
+            border-radius: 6px;
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+        }
+        .posts {
+            background: #ebfaf2;
+        }
+        .posts:active {
+            background: #dff7ea; 
+        }
+        .posts:hover {
+            border: 1px solid #dff7ea;
+        }
+        .news {
+            background: #f5fbff;
+        }
+        .news:active {
+            background: #e6f5ff; 
+        }
+        .news:hover {
+            border: 1px solid #e6f5ff;
+        }
+        .projects {
+            background: #eee;
+        }
+        .projects:active {
+            background: #e6e6e6; 
+        }
+        .projects:hover {
+            border: 1px solid #e6e6e6;
+        }
+        .services {
+            background: #fef4f7;
+        }
+        .services:active {
+            background: #fcdde6; 
+        }
+        .services:hover {
+            border: 1px solid #fcdde6;
+        }
+        .tools {
+            background: #f9fbef;
+        }
+        .tools:active {
+            background: #f1f6db; 
+        }
+        .tools:hover {
+            border: 1px solid #f1f6db;
+        }
+        .about {
+            background: #f9f9f9;
+        }
+        .about:active {
+            background: #eee; 
+        }
+        .about:hover {
+            border: 1px solid #eee;
+        }
+    }
+}
+
+@include mobile {
+    header .info h2 {
+        margin: 0.125em 0;
+    }
+}

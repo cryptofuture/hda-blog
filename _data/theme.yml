@@ -1,0 +1,60 @@
+color:
+  palette:   null
+  highlight: github
+
+date:
+  short:      "%B %e, %Y"
+  long:       "%A, %B %e, %Y, %I:%M %p"
+  allow_long: false
+
+navigation:
+  older_left: false
+  
+text:
+  meta:
+    title_sep:    "-"
+  date:
+    post:         "Written on"
+    proj:         "Worked on"
+  excerpt:
+    read_more:    "Read More"
+  mark:
+    latest_post:  <img src="/images/mark-mug.svg" width="17" title="Latest Post">
+    feature_post: <img src="/images/mark-star.svg" width="17" title="Popular Post">
+    feature_proj: <img src="/images/mark-star.svg" width="17" title="Popular Project">
+    rss:          <img class="icon-rss" src="/images/icon-rss.svg" width="15" title="Subscribe via RSS">
+  paginate:
+    at_page:      "Page: "
+    of_page:      " of "
+    prev_page:    <img src="/images/prev.svg" width="17" title="Previous Page">
+    next_page:    <img src="/images/next.svg" width="17" title="Next Page">
+  project:
+    website: <img src="/images/icon-website.svg" width="25" title="Website">
+    source:  <img src="/images/icon-github.svg" width="25" title="Source Code">
+    fdroid:  <img src="/images/icon-android.svg" width="25" title="Android Application">
+    ppa:     <img src="/images/icon-ppa.svg" width="25" title="Ubuntu PPA">
+  services:
+    website: <img src="/images/icon-website.svg" width="25" title="Website">
+    fdroid:  <img src="/images/icon-android.svg" width="25" title="Android Application">
+    bash:    <img src="/images/icon-bash.svg" width="25" title="Bash Script">
+    source:  <img src="/images/icon-github.svg" width="25" title="Source Code">
+  tool:
+    website: <img src="/images/icon-website.svg" width="25" title="Website">
+    fdroid:  <img src="/images/icon-android.svg" width="25" title="Android Application">
+    bash:    <img src="/images/icon-bash.svg" width="25" title="Bash Script">
+    source:  <img src="/images/icon-github.svg" width="25" title="Source Code">
+  about:
+    website:   <img src="/images/icon-website.svg" width="25" title="Website">
+    linkedin:  <img src="/images/icon-linkedin.svg" width="25" title="LinkedIn">
+    github:    <img src="/images/icon-github.svg" width="25" title="GitHub">
+    upwork:    <img src="/images/icon-upwork.svg" width="25" title="Upwork">
+    reddit:    <img src="/images/icon-reddit.svg" width="18" title="Reddit">
+    lor:       <img src="/images/icon-lor.svg" width="20" title="LOR">
+    launchpad: <img src="/images/icon-ppa.svg" width="25" title="Launchpad">
+    pgp:       <img src="/images/icon-pgp.svg" width="25" title="PGP Keys">
+    email:     <img src="/images/icon-email.svg" width="25" title="Send an email">
+    xmpp:      <img src="/images/icon-xmpp.svg" width="25" title="Jabber">
+    source:    <img src="/images/icon-github.svg" width="25" title="Source Code">
+    privacy:   <img src="/images/icon-privacy.svg" width="32" title="Privacy Policy">
+    canary:    <img src="/images/icon-canary.svg" width="25" title="Warrant Canary">
+    

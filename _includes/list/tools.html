@@ -1,0 +1,40 @@
+{% if include.feature %}
+  {% assign list_all = true %}
+{% else %}
+  {% assign list_all = true %}
+{% endif %}
+{% for tool in site.tools reversed %}
+  {% if list_all or
+        include.feature.list contains tool.id %}
+    <article class="excerpt post">
+      <br><div class="flex align-center mobile-column">
+        <div class="flexitem fill">
+          <a href="{{ tool.website }}" class="tools doom">{{ tool.title }}</a>
+        </div>
+        <div class="mark {% unless list_all %}feature{% endunless %} flexitem mobile-first">
+            {{ tool.display_status }}
+        </div>
+      </div>
+      <div class="excerpt entry">
+        {{ tool.excerpt }}
+        {% if tool.bash and tool.fdroid %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ tool.website }}">{{ site.data.theme.text.tool.website }}</a></li>
+          <li class="icon-link-item"><a href="{{ tool.source }}">{{ site.data.theme.text.tool.source }}</a></li>
+          <li class="icon-link-item"><a href="{{ tool.fdroid }}">{{ site.data.theme.text.tool.fdroid }}</a></li>
+          <li class="icon-link-item"><a href="{{ tool.bash }}">{{ site.data.theme.text.tool.bash }}</a></li>
+        </ul>
+        {% elsif tool.website and tool.source %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ tool.website }}">{{ site.data.theme.text.tool.website }}</a></li>
+          <li class="icon-link-item"><a href="{{ tool.source }}">{{ site.data.theme.text.tool.source }}</a></li>
+        </ul>
+        {% else %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ tool.website }}">{{ site.data.theme.text.tool.website }}</a></li>
+        </ul>
+        {% endif %}
+      </div>
+    </article>
+  {% endif %}
+{% endfor %}

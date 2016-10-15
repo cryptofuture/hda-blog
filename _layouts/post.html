@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="container">
+  <article class="post">
+    <div class="flex align-center mobile-column">
+      <div class="flexitem fill">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </div>
+    <div class="entry">
+      {{ content }}
+    </div>
+    <div class="tags">
+      {% if page.tags.size > 0 %}
+      {% include list/tags.html tags=page.tags %}
+      {% endif %}
+    </div>
+    <div class="date">
+      {{ site.data.theme.text.date.post }} {% include date/display.html date=page.date type="long" %}
+    </div>
+    {% include paginate/single.html %}
+    <div class="comment">
+      {% include gpgc_comments.html post_title=page.title %}
+    </div>
+  </article>
+</div>

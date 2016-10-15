@@ -1,0 +1,43 @@
+{% if include.feature %}
+  {% assign list_all = false %}
+{% else %}
+  {% assign list_all = true %}
+{% endif %}
+{% for about in site.about reversed %}
+  {% if list_all or
+        include.feature.list contains about.id %}
+    <article class="excerpt post">
+      <br><div class="flex align-center mobile-column">
+        <div class="flexitem fill">
+          <a href="{{ about.url | prepend: site.baseurl }}" class="about doom">{{ about.title }}</a>
+        </div>
+      </div>
+       <div class="excerpt entry">
+        {{ about.excerpt }}
+        {% if about.linkedin and about.github %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ about.linkedin }}">{{ site.data.theme.text.about.linkedin }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.github }}">{{ site.data.theme.text.about.github }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.upwork }}">{{ site.data.theme.text.about.upwork }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.reddit }}">{{ site.data.theme.text.about.reddit }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.lor }}">{{ site.data.theme.text.about.lor }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.launchpad }}">{{ site.data.theme.text.about.launchpad }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.pgp }}">{{ site.data.theme.text.about.pgp }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.xmpp }}">{{ site.data.theme.text.about.xmpp }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.email }}">{{ site.data.theme.text.about.email }}</a></li>
+        </ul>
+        {% elsif about.source and about.canary %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ about.source }}">{{ site.data.theme.text.about.source }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.privacy }}">{{ site.data.theme.text.about.privacy }}</a></li>
+          <li class="icon-link-item"><a href="{{ about.canary }}">{{ site.data.theme.text.about.canary }}</a></li>
+        </ul>
+        {% else %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ about.source }}">{{ site.data.theme.text.about.source }}</a></li>
+        </ul>
+        {% endif %}
+      </div>
+    </article>
+  {% endif %}
+{% endfor %}

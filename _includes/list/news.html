@@ -1,0 +1,26 @@
+{% if include.feature %}
+  {% assign list_all = true %}
+{% else %}
+  {% assign list_all = true %}
+{% endif %}
+{% for news in site.news reversed %}
+  {% if list_all or
+        include.feature.list contains news.id %}
+    <article class="excerpt news">
+      <br><div class="flex align-center mobile-column">
+        <div class="flexitem fill">
+          <a href="{{ news.website }}" class="news doom">{{ news.title }}</a>
+        </div>
+        <div class="mark {% unless list_all %}feature{% endunless %} flexitem mobile-first">
+          {% if list_all %}
+            {% include date/display.html date=news.date %}
+          {% elsif forloop.first and include.feature.latest %}
+            {{ site.data.theme.text.mark.latest_news }}
+          {% else %}
+            {{ site.data.theme.text.mark.feature_news }}
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endif %}
+{% endfor %}

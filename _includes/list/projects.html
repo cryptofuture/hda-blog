@@ -1,0 +1,49 @@
+{% if include.feature %}
+  {% assign list_all = false %}
+{% else %}
+  {% assign list_all = true %}
+{% endif %}
+{% for project in site.projects reversed %}
+  {% if list_all or
+        include.feature.list contains project.id %}
+    <article class="excerpt post">
+      <br><div class="flex align-center mobile-column">
+        <div class="flexitem fill">
+          <a href="{{ project.url | prepend: site.baseurl }}" class="projects doom">{{ project.title }}</a>
+        </div>
+        <div class="mark {% unless list_all %}feature{% endunless %} flexitem mobile-first">
+          {% if list_all %}
+            {{ project.display_date }}
+          {% else %}
+            {{ site.data.theme.text.mark.feature_proj }}
+          {% endif %}
+        </div>
+      </div>
+      <div class="excerpt entry">
+        {{ project.excerpt }}
+        <a class="read more" href="{{ project.url | prepend: site.baseurl }}">{{ site.data.theme.text.excerpt.read_more }}</a>
+        {% if project.website and project.source and project.fdroid %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ project.website }}">{{ site.data.theme.text.project.website }}</a></li>
+          <li class="icon-link-item"><a href="{{ project.source }}">{{ site.data.theme.text.project.source }}</a></li>
+          <li class="icon-link-item"><a href="{{ project.fdroid }}">{{ site.data.theme.text.project.fdroid }}</a></li>
+        </ul>
+        {% elsif project.website and project.source %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ project.website }}">{{ site.data.theme.text.project.website }}</a></li>  
+          <li class="icon-link-item"><a href="{{ project.source }}">{{ site.data.theme.text.project.source }}</a></li>
+        </ul>
+        {% elsif project.source and project.ppa %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ project.source }}">{{ site.data.theme.text.project.source }}</a></li>
+          <li class="icon-link-item"><a href="{{ project.ppa }}">{{ site.data.theme.text.project.ppa }}</a></li>
+        </ul>
+        {% else %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ project.source }}">{{ site.data.theme.text.project.source }}</a></li>
+        </ul>
+        {% endif %}
+      </div>
+    </article>
+  {% endif %}
+{% endfor %}

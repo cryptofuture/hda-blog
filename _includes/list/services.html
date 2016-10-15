@@ -1,0 +1,40 @@
+{% if include.feature %}
+  {% assign list_all = true %}
+{% else %}
+  {% assign list_all = true %}
+{% endif %}
+{% for services in site.services reversed %}
+  {% if list_all or
+        include.feature.list contains services.id %}
+    <article class="excerpt post">
+      <br><div class="flex align-center mobile-column">
+        <div class="flexitem fill">
+          <a href="{{ services.website }}" class="services doom">{{ services.title }}</a>
+        </div>
+        <div class="mark {% unless list_all %}feature{% endunless %} flexitem mobile-first">
+            {{ services.display_status }}
+        </div>
+      </div>
+      <div class="excerpt entry">
+        {{ services.excerpt }}
+        {% if services.bash and services.fdroid %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ services.website }}">{{ site.data.theme.text.services.website }}</a></li>
+          <li class="icon-link-item"><a href="{{ services.source }}">{{ site.data.theme.text.services.source }}</a></li>
+          <li class="icon-link-item"><a href="{{ services.fdroid }}">{{ site.data.theme.text.services.fdroid }}</a></li>
+          <li class="icon-link-item"><a href="{{ services.bash }}">{{ site.data.theme.text.services.bash }}</a></li>
+        </ul>
+        {% elsif services.website and services.source %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ services.website }}">{{ site.data.theme.text.services.website }}</a></li>
+          <li class="icon-link-item"><a href="{{ services.source }}">{{ site.data.theme.text.services.source }}</a></li>
+        </ul>
+        {% else %}
+        <ul class="icon-links">
+          <li class="icon-link-item"><a href="{{ services.website }}">{{ site.data.theme.text.services.website }}</a></li>
+        </ul>
+        {% endif %}
+      </div>
+    </article>
+  {% endif %}
+{% endfor %}

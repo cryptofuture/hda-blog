@@ -1,0 +1,344 @@
+.infobox {
+    background: $major-color;
+    border: 1px solid $border-color;
+}
+
+.spoiler {
+    background: $minor-color;
+    color: $minor-color;
+}
+
+.spoiler::before {
+    content: "spoiler alert!";
+    color: $font-color;
+}
+
+.mainmatter {
+    @extend .sep-bottom;
+    background: $background-color;
+}
+
+.mainmatter::after {
+    display: block;
+    content: "";
+    height: 3em;
+}
+
+h4 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.projects.doom {
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    background: #eee;
+    color: #585858;
+    border-radius: 6px;
+}
+
+.projects.doom:hover {
+    color: $link-color;
+}
+
+.projects.doom:active {
+    background: #e6e6e6;
+    color: #585858;    
+}
+
+.projects.doom:visited {
+    background: transparent;
+}
+
+.tools.doom {
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    background: #f9fbef;
+    color: #585858;
+    border-radius: 6px;
+}
+
+.tools.doom:hover {
+    color: $link-color;
+}
+
+.tools.doom:active {
+    background: #f1f6db;
+    color: #585858;    
+}
+
+.tools.doom:visited {
+    background: transparent;
+}
+
+.services.doom {
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    background: #fef4f7;
+    color: #585858;
+    border-radius: 6px;
+}
+
+.services.doom:hover {
+    color: $link-color;
+}
+
+.services.doom:active {
+    background: #fcdde6;
+    color: #585858;    
+}
+
+.services.doom:visited {
+    background: transparent;
+}
+
+.posts.doom {
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    background: #ebfaf2;
+    color: #585858;
+    border-radius: 6px;
+}
+
+.posts.doom:hover {
+    color: $link-color;
+}
+
+.posts.doom:active {
+    background: #dff7ea;
+    color: #585858;    
+}
+
+.posts.doom:visited {
+    background: transparent;
+}
+
+.about.doom {
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    background: #f9f9f9;
+    color: #585858;
+    border-radius: 6px;
+}
+
+.about.doom:hover {
+    color: $link-color;
+}
+
+.about.doom:active {
+    background: #eee;
+    color: #585858;    
+}
+
+.about.doom:visited {
+    background: transparent;
+}
+
+.news.doom {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    background: #f5fbff;
+    color: #585858;
+    border-radius: 6px;
+}
+
+.news.doom:hover {
+    color: $link-color;
+}
+
+.news.doom:active {
+    background: #e6f5ff;
+    color: #585858;    
+}
+
+.news.doom:visited {
+    background: transparent;
+}
+
+.rss {
+    display: inline;
+    
+    .icon-rss {
+    position: relative;
+    margin: 0;
+    display: inherit;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1em;
+    width: 100%;
+    max-width: $content-width;
+}
+
+.target:not(:target) {
+    display: none;
+}
+
+
+.float-left {
+    float: left;
+    margin-right: 1em;
+}
+
+.float-right {
+    float: right;
+    margin-left: 1em;
+}
+
+.clear-float {
+    clear: both;
+    overflow: auto;
+}
+
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.sep-left {
+    border-left: 1px solid $border-color;
+}
+
+.sep-right {
+    border-right: 1px solid $border-color;
+}
+
+.sep-top {
+    border-top: 1px solid $border-color;
+}
+
+.sep-bottom {
+    border-bottom: 1px solid $border-color;
+}
+
+.flex {
+    display: -ms-flex;
+    display:     flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.mobile-column {
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.flex.mobile-column.align-center {
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.flex.mobile-column.align-center {
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.flexitem.fill {
+    flex: 1;
+}
+
+.flexitem.mobile-first {
+    background: #f9f9f9;
+    border-radius: 6px;
+    @include mobile {
+        order: -1;
+    }
+}
+
+.flexitem.fill.text-left {
+    a {
+    letter-spacing: 1px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    color: #585858;
+    }
+    
+    a:hover {
+    background: transparent;
+    color: $link-color;
+    }
+
+    a:visited {
+    background: transparent;
+    }
+
+    a:active {
+    background: #eee;
+    color: #585858;
+    }
+
+}
+
+.flexitem.fill.text-right {
+   a {
+    letter-spacing: 1px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    color: #585858;
+    }
+    
+    a:hover {
+    background: transparent;
+    color: $link-color;
+    }
+
+    a:visited {
+    background: transparent;
+    }
+
+    a:active {
+    background: #eee;
+    color: #585858;
+    }
+}
+
+.MathJax_Display {
+    overflow: auto;
+    padding: 0.75em 0.5em;
+}
+
+.highlight.flexitem {
+    overflow-y: hidden;
+}

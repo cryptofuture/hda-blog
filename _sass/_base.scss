@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+@include selection {
+    color: #fff;
+    background: #d1cecc;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font: 100% $font-body;
+    font-variant-ligatures: common-ligatures;
+}
+
+body {
+    background: $major-color;
+    color: $font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 0.5em;
+    padding: 0;
+    color: $font-color;
+    font-family: $font-head;
+    line-height: 1.7;
+    a {
+        color: inherit;
+    }
+}
+
+@include mobile {
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+        margin: 0.5em 0 0;
+    }
+}
+
+a {
+    transition: 0.25s;
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover, &:active {
+        color: $link-color;
+    }
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 75%;
+    background: $border-color;
+}
+
+table {
+    margin: auto;
+    max-width: 100%;
+
+    th, td {
+        padding: 0.25em 1em;
+    }
+}
+thead {
+    background: $major-color;
+}
+tfoot {
+    background: $minor-color;
+}
+td {
+    @extend .sep-bottom;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0 1.5em;
+    border-left: 0.30em solid #f9f9f9;
+}
+
+.highlighter-rouge {
+    border-radius: 6px;
+}
+
+code {
+    @extend .highlight;
+    font-family: $font-mono;
+    font-size: $font-mono-size;
+    padding: 0 0.33em;
+}
+
+pre {
+    font-family: $font-mono;
+    line-height: $font-mono-line-height;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    /* box-shadow: 1px 1px 2px #d1cecc; */
+    padding: 1em;
+    code {
+        padding: 0;
+        background: none;
+    }
+}
+
+figure {
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}

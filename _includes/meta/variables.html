@@ -1,0 +1,10 @@
+{% capture meta-merged-title %}{% if page.title %}{{ page.title }} {{ site.data.theme.text.meta.title_sep }} {% endif %}{{ site.title }}{% endcapture %}
+{% capture meta-title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% capture meta-description %}{% if page.excerpt %}{{ page.excerpt | strip_html | newline_to_br | replace: '<br />', ' ' | strip_newlines | replace: '  ', ' ' | remove: '&lt;' | remove: '&gt;' |replace: '"', '' | truncatewords: 50 }}{% else %}{{site.description }}{% endif %}{% endcapture %}
+{% capture meta-url %}{{ page.url | replace: "index.html","" | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+{% capture meta-type %}{% if page.layout == "about" %}profile{% elsif page.layout == "post" %}article{% elsif page.layout == "project" %}product{% else %}website{% endif %}{% endcapture %}
+{% assign meta-img = site.cover | prepend: site.baseurl %}
+{% assign meta-vid = content | split: "<iframe " %}
+{% assign meta-vid = meta-vid[1] | split: 'src="' %}
+{% assign meta-vid = meta-vid[1] | split: '"' %}
+{% assign meta-vid = meta-vid[0] | split: '/' | last %}

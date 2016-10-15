@@ -1,0 +1,16 @@
+---
+article: false
+feature:
+  posts:
+    latest: true
+    list:
+      - "/2013/12/07/k9-restore-password"
+  projects:
+    list:
+      - "/projects/passcard"
+---
+
+<div class="posts">
+  {% include list/posts.html feature=page.feature.posts %}
+  {% include list/projects.html feature=page.feature.projects %}
+</div>

@@ -1,0 +1,18 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include preload.html %}
+  </head>
+  <body class="flex column">
+    <div class="mainmatter flexitem fill">
+      {% include header.html %}
+      {{ content }}
+    </div>
+    {% include footer.html %}
+    {% include style/non_critical.html %}
+  </body>
+</html>

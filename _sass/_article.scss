@@ -1,0 +1,124 @@
+.mark {
+    padding: 0.33em;
+    color: #585858;
+}
+
+.mark.feature {
+    color: #585858;
+
+}
+
+.posts > .excerpt.post {
+    @extend .sep-bottom;
+    padding-bottom: 2em;
+}
+
+.posts > .excerpt.post:last-child {
+    padding-bottom: 1em;
+    border-bottom: none;
+}
+
+.icon-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  top: 4px;
+  text-align: center;
+}
+
+.icon-link-item {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.read.more {
+    letter-spacing: 1px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    color: #585858;
+}
+
+.read.more:hover {
+    background: transparent;
+    border: 1px solid #eee;
+}
+
+.read.more:visited {
+    background: #f5fbff;
+    border: 1px solid #f5fbff;
+}
+
+.read.more:active {
+    background: #f9fbef;
+    border: 1px solid #f9fbef;
+}
+
+
+.tags {
+    text-align: right;
+    
+    a {
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    color: #585858;
+    }
+    
+    a:visited {
+    background: #f5fbff;
+    border: 1px solid #f5fbff;
+    }
+    
+    a:hover {
+    color: $link-color;
+    background: #eee;
+    }
+    
+    a:active {
+    background: #f9fbef;
+    border: 1px solid #f9fbef;
+    }
+}
+
+.pagination {
+    @extend .sep-top;
+    margin-top: 1em;
+    padding-top: 1em;
+    text-align: center;
+}
+
+.project .info {
+    div {
+        padding: 0.33em;
+        text-align: center;
+    }
+
+    .demo {
+        background: $major-color;
+    }
+
+    .source {
+        background: $minor-color;
+    }
+}
+
+.tool .info {
+    div {
+        padding: 0.33em;
+        text-align: center;
+    }
+
+    .demo {
+        background: $major-color;
+    }
+
+    .source {
+        background: $minor-color;
+    }
+}
+
+.date {
+    color: #585858;
+    text-align: right;
+}

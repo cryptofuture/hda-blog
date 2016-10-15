@@ -1,0 +1,20 @@
+<div class="container">
+  <header class="flex align-center mobile-column">
+    <div class="logo">
+      <a href="{{ site.baseurl }}/"><img src="{{ site.logo | prepend: site.baseurl }}" width="96" title="Hard Drive Archive"/></a>
+    </div>
+    <div class="info flexitem fill">
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+      <h2>{{ site.description_short }}</h2>
+    </div>
+    <nav id="main-navigation">
+      <a class="posts" href="{{ site.baseurl }}/posts">Posts</a>
+      {% if site.projects.size != 0 %}
+        <a class="projects" href="{{ site.baseurl }}/projects">Projects</a>
+        <a class="services" href="{{ site.baseurl }}/services">Services</a>
+        <a class="tools" href="{{ site.baseurl }}/tools">Tools</a>
+      {% endif %}
+      <a class="about" href="{{ site.baseurl }}/about">About</a>
+    </nav>
+  </header>
+</div>
