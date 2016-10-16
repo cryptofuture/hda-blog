@@ -36,7 +36,6 @@ HDA is an acronym for Hard Drive Archive. HDA promotes [Free Software](https://w
 - [hda.me](https://hda.me) - HDA Url Shortener
     - [blog.hda.me](https://blog.hda.me) - HDA Blog Main page (last post, popular post and popular project listing)
         - [blog.hda.me/posts](https://blog.hda.me/posts) - Blog context
-        - [blog.hda.me/news](https://blog.hda.me/news) - Test 3rd party news/links sharing directory 
         - [blog.hda.me/projects](https://blog.hda.me/projects) - Projects directory
         - [blog.hda.me/services](https://blog.hda.me/services) - Services directory
         - [blog.hda.me/tools](https://blog.hda.me/tools) - Tools directory
