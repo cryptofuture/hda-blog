@@ -10,7 +10,7 @@ logo:        "/images/logo.svg"
 cover:       "/images/cover.png"
 
 baseurl: ""                       
-url:     "https://blog.hda.me"
+url:     ""
 owner: https://blog.hda.me/about/about-me
 
 excerpt_separator: <!--more-->
