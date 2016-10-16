@@ -9,7 +9,7 @@ description_short: You do have backups, do you?
 logo:        "/images/logo.svg"
 cover:       "/images/cover.png"
 
-baseurl: ""                       
+#baseurl: ""                       
 url:     "https://blog.hda.me"
 owner: https://blog.hda.me/about/about-me
 
