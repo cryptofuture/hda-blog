@@ -94,7 +94,7 @@ function onMessage(event) {
 
   switch (event.data.type) {
   case "login":
-    if (event.origin === gpgc.site_url && event.data.state === StateChallenge) {
+    if (event.origin === gpgc.site_baseurl && event.data.state === StateChallenge) {
       handleLogin(event.data.code);
     }
     return;
@@ -696,7 +696,7 @@ function verifyCss() {
 
 function verifyInitialConditions() {
   var missingPropertyMessage = "<h3><strong>gpgc</strong> Error: Incomplete Configuration</h3><p>The following settings are missing:</p>";
-  var stringPropertyNames = ["site_url", "page_path", "issue_title", "repo_id", "github_application_client_id", "github_application_code_authenticator_url", "github_application_login_redirect_url"];
+  var stringPropertyNames = ["site_baseurl", "page_path", "issue_title", "repo_id", "github_application_client_id", "github_application_code_authenticator_url", "github_application_login_redirect_url"];
   var booleanPropertyNames = ["new_comments_disabled", "use_show_action", "enable_diagnostics"];
   var missingPropertyCounter = 0;
 
