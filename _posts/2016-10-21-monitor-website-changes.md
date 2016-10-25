@@ -76,6 +76,8 @@ os.chdir('/opt/MailWebsiteChanges/changes')
 
 Some websites don't like MailWebsiteChanges user-agent, thats why I made some mwc script modifications.
 
+> UPDATE. You don't need it since [50af2ea](https://github.com/Debianguru/MailWebsiteChanges/commit/50af2eabda1dadaa4208a3d7f06686f824d5f50d) commit.
+
 ```python
         titleregex = site.get('titleregex', '')
 +       broken = site.get('broken', '')
