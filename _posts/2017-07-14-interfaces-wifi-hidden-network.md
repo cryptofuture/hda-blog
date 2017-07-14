@@ -17,5 +17,6 @@ wpa-ssid NETNAME
 wpa-scan-ssid 1
 wpa-psk password
 ```
+<!--more-->
 
 As you can see the magic line is `wpa-scan-ssid 1` and without it you just will never find you hidden "" empty name Wi-Fi. Also I'm pretty sure you can hash password with empty("") ssid name, but I didn't tried it.
