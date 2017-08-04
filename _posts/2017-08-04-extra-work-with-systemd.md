@@ -8,6 +8,7 @@ tags:
 date: 2017-08-04
 ---
 Let's say you want to override systemd unit. You typical way to do it will be copying original unit from `/lib/systemd/system/unit.service` to `/etc/systemd/system/`, editing unit and reloading systemctl with `systemctl daemon-reload`. And you will be very surprised, that your previous jobs or users still use `/lib/systemd/system/unit.service`. So you need to do `systemctl reenable unit@job` for every connection/user/job. And simple unit editing became a way longer task...
+<!--more-->
 
 #### Why this happens?
 
